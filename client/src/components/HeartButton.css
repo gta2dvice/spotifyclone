@@ -1,0 +1,67 @@
+.heart-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: #b3b3b3;
+  cursor: pointer;
+  padding: 0.35rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.heart-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.heart-btn--sm svg {
+  width: 16px;
+  height: 16px;
+}
+
+.heart-btn--lg svg {
+  width: 22px;
+  height: 22px;
+}
+
+.heart-btn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  transform: scale(1.1);
+}
+
+.heart-btn--liked {
+  color: #1ed760;
+}
+
+.heart-btn--liked:hover {
+  color: #1fdf64;
+  background: rgba(30, 215, 96, 0.12);
+}
+
+.song-row .heart-btn {
+  opacity: 0;
+}
+
+.song-row:hover .heart-btn,
+.song-row.active .heart-btn,
+.song-row .heart-btn--liked,
+.song-row .heart-btn:focus-visible {
+  opacity: 1;
+}
+
+.player-song .heart-btn {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .song-row .heart-btn {
+    opacity: 1;
+  }
+}
